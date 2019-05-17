@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.avl.ditest</groupId>
+	<artifactId>springBoot.plugin.demo.builder</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<description>The build POM for the Spring Boot Plugin Demo</description>
+	<name>Spring Boot Plugin Demo Builder</name>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.avl.ditest</groupId>
+		<artifactId>springBoot.plugin.demo.bom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../BOM</relativePath>
+	</parent>
+	
+	<!-- 
+		This POM builds all other modules of the Spring Boot plugin demo so that they don't have to be built individually
+		and also don't have to be installed into the maven repository.
+		Call 'maven clean package' in the directory where this POM file is located.
+	-->
+
+	<modules>
+		<module>../API</module>
+		<module>../SimplePlugin</module>
+		<module>../AnotherPlugin</module>
+		<module>../MainApp</module>
+		<module>../CombinedApp</module>
+	</modules>
+</project>

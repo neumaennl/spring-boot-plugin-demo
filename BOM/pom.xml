@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.avl.ditest</groupId>
+	<artifactId>springBoot.plugin.demo.bom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<description>Bill of materials for the Spring Boot Plugin Demo</description>
+	<name>Spring Boot Plugin Demo BOM</name>
+	<packaging>pom</packaging>
+	
+	<!-- 
+		This is the parent POM for all other modules.
+		It defines the versions for all dependencies and maven plugins
+		and also does most of the configuration for the maven plugins.
+		Therefore most of the configuration is the same for all modules
+		and it can be changed in one place.
+	-->
+
+	<!-- Inherit defaults from Spring Boot -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+	</parent>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<release>11</release>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>maven-central-cache</id>
+			<name>maven-central-cache</name>
+			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/maven-central-cache</url>
+		</repository>
+		<repository>
+			<id>libs-release</id>
+			<name>libs-release</name>
+			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>libs-snapshot</id>
+			<name>libs-snapshot</name>
+			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>libs-release</id>
+			<name>libs-release</name>
+			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>libs-snapshot</id>
+			<name>libs-snapshot</name>
+			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-snapshot</url>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+</project>
