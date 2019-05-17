@@ -28,6 +28,7 @@
 		<module>../API</module>
 		<module>../SimplePlugin</module>
 		<module>../AnotherPlugin</module>
+		<module>../ErrorPlugin</module>
 		<module>../MainApp</module>
 		<module>../CombinedApp</module>
 	</modules>

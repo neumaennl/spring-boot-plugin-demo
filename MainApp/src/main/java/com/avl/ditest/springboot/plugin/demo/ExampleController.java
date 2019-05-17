@@ -55,8 +55,6 @@ public class ExampleController {
     @RequestMapping("/")
     public String index() {
 
-        plugins.forEach(plugin -> plugin.doSomething());
-
         StringBuilder content = new StringBuilder();
 
         content.append("<html><head><title>");
@@ -81,8 +79,19 @@ public class ExampleController {
             content.append("</ul>");
         }
 
+        content.append("<b>doSomething() is called on all plugins each time this page is refreshed.</b></br>");
+
+        for (Plugin plugin : plugins) {
+            try {
+                plugin.doSomething();
+            } catch (RuntimeException e) {
+                content.append(
+                        String.format("%s threw an %s: %s<br/>", plugin.getName(), e.getClass().getSimpleName(),
+                                e.getMessage()));
+            }
+        }
+
         content.append("<h1>Context</h1>");
-        content.append("doSomething() is called on all plugins each time this page is refreshed.");
         if (context.get().isEmpty()) {
             content.append("Context is empty");
         } else {

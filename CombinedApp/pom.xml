@@ -34,6 +34,11 @@
 			<artifactId>springBoot.plugin.demo.anotherPlugin</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.avl.ditest</groupId>
+			<artifactId>springBoot.plugin.demo.errorPlugin</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
