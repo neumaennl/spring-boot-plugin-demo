@@ -39,47 +39,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>maven-central-cache</id>
-			<name>maven-central-cache</name>
-			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/maven-central-cache</url>
-		</repository>
-		<repository>
-			<id>libs-release</id>
-			<name>libs-release</name>
-			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-release</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>libs-snapshot</id>
-			<name>libs-snapshot</name>
-			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>libs-release</id>
-			<name>libs-release</name>
-			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-release</url>
-			<snapshots>
-				<enabled>false</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>libs-snapshot</id>
-			<name>libs-snapshot</name>
-			<url>http://jenkins.avl01.avlcorp.lan:10000/artifactory/libs-snapshot</url>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
