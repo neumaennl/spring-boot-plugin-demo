@@ -4,14 +4,14 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.avl.ditest</groupId>
+	<groupId>de.neumaennl</groupId>
 	<artifactId>springBoot.plugin.demo.combinedApp</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<description>The POM combining the Main Application and the Plugins for the Spring Boot Plugin Demo</description>
 	<name>Spring Boot Plugin Demo Combined App</name>
 
 	<parent>
-		<groupId>com.avl.ditest</groupId>
+		<groupId>de.neumaennl</groupId>
 		<artifactId>springBoot.plugin.demo.bom</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../BOM</relativePath>
@@ -20,22 +20,22 @@
 	<!-- This module bundles the main app and all the plugins -->
 	<dependencies>
 		<dependency>
-			<groupId>com.avl.ditest</groupId>
+			<groupId>de.neumaennl</groupId>
 			<artifactId>springBoot.plugin.demo.mainApp</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.avl.ditest</groupId>
+			<groupId>de.neumaennl</groupId>
 			<artifactId>springBoot.plugin.demo.simplePlugin</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.avl.ditest</groupId>
+			<groupId>de.neumaennl</groupId>
 			<artifactId>springBoot.plugin.demo.anotherPlugin</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.avl.ditest</groupId>
+			<groupId>de.neumaennl</groupId>
 			<artifactId>springBoot.plugin.demo.errorPlugin</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
@@ -48,7 +48,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.avl.ditest.springboot.plugin.demo.MainApp</mainClass>
+					<mainClass>de.neumaennl.springboot.plugin.demo.MainApp</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

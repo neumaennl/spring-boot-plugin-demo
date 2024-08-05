@@ -3,5 +3,5 @@
  */
 open module springBootPluginDemo.api {
 
-    exports com.avl.ditest.springboot.plugin.demo.api;
+    exports de.neumaennl.springboot.plugin.demo.api;
 }
